@@ -30,14 +30,6 @@ void cpu_stencil(float c0,float c1, float *A0,float * Anext,const int nx, const 
 		{
 			for(k=1;k<nz-1;k++)
 			{
-				/*Anext[Index3D (nx, ny, i, j, k)] = 
-				(A0[Index3D (nx, ny, i, j, k + 1)] +
-				A0[Index3D (nx, ny, i, j, k - 1)] +
-				A0[Index3D (nx, ny, i, j + 1, k)] +
-				A0[Index3D (nx, ny, i, j - 1, k)] +
-				A0[Index3D (nx, ny, i + 1, j, k)] +
-				A0[Index3D (nx, ny, i - 1, j, k)])*c1
-				- A0[Index3D (nx, ny, i, j, k)]*c0;*/
 				Anext[Index3D (nx, ny, i, j, k)] = vect1(c0,c1,A0,nx,ny,i,j,k);
 			}
 		}
