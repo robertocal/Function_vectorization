@@ -2,7 +2,7 @@
 
 LANGUAGE=c
 SRCDIR_OBJS=main.o file.o
-APP_CFLAGS=-ffast-math -O2 -mavx2 -fopenmp-simd -S
+APP_CFLAGS=-ffast-math -O2 -mavx2 -fopenmp-simd
 APP_CXXFLAGS=-ffast-math
-APP_CXXFLAGS += -O2 -mavx2 -fopenmp-simd -S
+APP_CXXFLAGS += -O2 -mavx2 -fopenmp-simd
 APP_LDFLAGS=-lm -lstdc++
